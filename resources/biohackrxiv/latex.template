@@ -436,7 +436,9 @@ $endif$
    \begin{flushleft}
    \sffamily\small
 
-  {\bfseries BioHackathon series:} \\
+  \vspace{2cm}
+
+  {\bfseries Project:} \\
   \href{$event_url$}{\color{linky}{$event_title$}} \\
        {$event_location$} \\
 
@@ -466,8 +468,8 @@ $endif$
 
   \vspace{4mm}
 
-  Published by
-  \href{http://biohackrxiv.org/}{\color{linky}{BioHackrXiv.org}}
+  %Published by
+  %\href{http://biohackrxiv.org/}{\color{linky}{BioHackrXiv.org}}
   % \par\vspace*{\fill}
 
   \end{flushleft}
