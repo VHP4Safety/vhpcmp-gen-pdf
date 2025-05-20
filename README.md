@@ -27,18 +27,19 @@ Clone this git repository and install the prerequisites listed above
 Generate the PDF with
 
 ```shell
-ruby ./bin/gen-pdf --debug ./example/cmp VHP output.tex
-ls -l example/cmp/output.tex
+groovy createMarkdown.groovy Q1
+ruby ./bin/gen-pdf --debug ./example/cmp VHP Q1.tex
+ls -l example/cmp/Q1.tex
 cd example/cmp
-lualatex output.tex
-biber output.tex
+lualatex Q1.tex
+biber Q1.tex
 ```
 
 Note that the svg figure may complain and other things. Just hit enter, that seems to be fine.
 Alternatively, use:
 
 ```shell
-lualatex -interaction nonstopmode output.tex
+lualatex -interaction nonstopmode Q1.tex
 ```
 
 To test the bib file you can try
