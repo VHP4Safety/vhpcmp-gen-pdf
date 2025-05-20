@@ -92,7 +92,7 @@ git_url = meta['git_url'] if not git_url and meta.has_key?('git_url')
 #raise GenPdfError,"git_url is undefined in metadata - provide 'git_url' in the markdown header as a reference to the git repo if you are using a zip file" if not git_url
 
 JOURNAL='compoundwiki'
-JOURNAL_NAME='Compound Resports'
+JOURNAL_NAME='Compound Reports'
 JOURNAL_URL='https://vhp4safety.nl/'
 TEX=resources + "/latex.template"
 CSL=resources + "/apa-new.csl"
