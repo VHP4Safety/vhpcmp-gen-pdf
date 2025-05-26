@@ -18,10 +18,10 @@ inchi = new net.bioclipse.managers.InChIManager(workspaceRoot);
 rdf = new net.bioclipse.managers.RDFManager(workspaceRoot);
 pubchem = new net.bioclipse.managers.PubChemManager(workspaceRoot);
 
-sparqlEP = "https://compoundcloud.wikibase.cloud/query/sparql"
-mdFile = "/example/cmp/paper.md"
-
 qid = args[0]
+
+sparqlEP = "https://compoundcloud.wikibase.cloud/query/sparql"
+mdFile = "/example/cmp/${qid}.md"
 
 ui.renewFile(mdFile)
 date = new SimpleDateFormat("d MMMMM yyyy").format(new Date());
@@ -74,3 +74,27 @@ The compound has the SMILES
 and
 `${cmpInChI}`.
 """)
+
+ui.append(mdFile, """
+|  |  |
+| -------- | -------- |
+| Molecular formula | ${cmpFormula} |
+| Mass | ${cmpMass} dalton |
+| InChIKey | ${cmpInChIKey} |
+""")
+
+ui.append(mdFile, "\n## Identifiers\n")
+
+
+
+ui.append(mdFile, "\n### Identifiers from Wikidata\n")
+
+
+
+ui.append(mdFile, "\n## Properties\n")
+
+
+
+ui.append(mdFile, "\n### Identifiers from Wikidata\n")
+
+
