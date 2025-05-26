@@ -46,7 +46,9 @@ Dir.chdir(dir) do
   File.unlink(outfn) if File.exist?(outfn)
 end
 
-papermd = dir + "/" + "paper.md"
+paperfn = outfn.dup
+paperfn.sub! 'tex', 'md'
+papermd = dir + "/" + paperfn
 raise "Can not find markdown file #{papermd}" if not File.exist?(papermd)
 
 header = md_parser(papermd)
@@ -124,7 +126,7 @@ cmd = <<COMMAND
       --lua-filter='#{INSERT_CITO}'
       -s
       --output='#{outfn}'
-      paper.md
+      #{paperfn}
 COMMAND
 
 
